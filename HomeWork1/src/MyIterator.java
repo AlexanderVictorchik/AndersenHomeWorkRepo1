@@ -29,6 +29,6 @@ public class MyIterator<E> implements Iterator<E>{
      */
     @Override
     public E next() {
-        return iteratorArrayValue[++index];
+        return iteratorArrayValue[index++];
     }
 }

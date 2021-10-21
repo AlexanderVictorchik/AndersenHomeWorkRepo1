@@ -10,5 +10,5 @@ public interface MyList<E> extends Iterable<E> {
     int size();
     void remove(int index);
     void renew(int index, E e);
-    
+
 }
