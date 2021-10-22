@@ -1,5 +1,5 @@
 /**
- * create new class myIterator that implements iterator interface
+ * create interface myIterator with Iterator methods
  * @param <E> is for Generics
  */
 public interface MyIterator<E> {
