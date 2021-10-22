@@ -1,34 +1,13 @@
-import java.util.Iterator;
-
 /**
  * create new class myIterator that implements iterator interface
  * @param <E> is for Generics
  */
-public class MyIterator<E> implements Iterator<E>{
+public interface MyIterator<E> {
 
-    int index = 0;
-    E[] iteratorArrayValue;
+    boolean hasNext();
 
-    /** create constructor
-     * @param iteratorArrayValue
-     */
-    public MyIterator(E[] iteratorArrayValue) {
-        this.iteratorArrayValue = iteratorArrayValue;
-    }
+    E next();
 
-    /**override iterator methods
-     * @return comparison between length of array and index
-     */
-    @Override
-    public boolean hasNext() {
-        return iteratorArrayValue.length > index;
-    }
+    void reset();
 
-    /**
-     * @return next value of the array
-     */
-    @Override
-    public E next() {
-        return iteratorArrayValue[index++];
-    }
 }

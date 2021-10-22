@@ -1,14 +1,13 @@
-//создаем интерфейс лист и добавляем методы.
-
-/**Create Interface MyList extended from Iterable
+/**Create Interface MyList extended from MyIterator
  * @param <E>
  */
-public interface MyList<E> extends Iterable<E> {
+public interface MyList<E> extends MyIterator<E> {
 
-    boolean add(E e);
-    E get(int index);
     int size();
+    void add (int index, E e);
+    void add(E e);
+    E get(int index);
     void remove(int index);
-    void renew(int index, E e);
-
+    E set(int index, E e);
+    <T extends Comparable> void sort(MyList<E> list);
 }
