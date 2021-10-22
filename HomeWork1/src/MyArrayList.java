@@ -5,6 +5,9 @@
  */
 public class MyArrayList<E> implements MyList<E> {
 
+    public static void main(String[] args) {
+    }
+
     private E[] array;
     private static final int DEFAULT_SIZE = 5;
     private int size;
@@ -16,6 +19,7 @@ public class MyArrayList<E> implements MyList<E> {
     public MyArrayList() {
         size = 0;
         ensureCapacity(DEFAULT_SIZE);
+
     }
 
     /**
@@ -24,7 +28,7 @@ public class MyArrayList<E> implements MyList<E> {
      * @param capacity
      */
     public MyArrayList(int capacity) {
-        array = (E[]) new Object[capacity];
+        size = capacity;
     }
 
     /**
@@ -86,6 +90,7 @@ public class MyArrayList<E> implements MyList<E> {
      */
     @Override
     public E get(int index) {
+        if (index < 0 || index >= size()) throw new ArrayIndexOutOfBoundsException();
         return array[index];
     }
 
@@ -173,7 +178,7 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     /**
-     * Method returns next element
+     * Method returns next index element
      *
      * @return
      */
@@ -183,7 +188,7 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     /**
-     * Method removes all data
+     * Method turns index to 0
      */
     @Override
     public void reset() {
