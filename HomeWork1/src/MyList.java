@@ -1,7 +1,7 @@
 /**Create Interface MyList extended from MyIterator with some List methods
  * @param <E>
  */
-public interface MyList<E> extends MyIterator<E> {
+public interface MyList<E> {
 
     int size();
     void add (int index, E e);

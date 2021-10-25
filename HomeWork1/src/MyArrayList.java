@@ -6,12 +6,12 @@
 public class MyArrayList<E> implements MyList<E> {
 
     public static void main(String[] args) {
+
     }
 
     private E[] array;
     private static final int DEFAULT_SIZE = 5;
     private int size;
-    private int index;
 
     /**
      * Standart constructor
@@ -166,32 +166,4 @@ public class MyArrayList<E> implements MyList<E> {
         a[j] = tmp;
     }
 
-
-    /**
-     * Method from Iterator interface check is there next element
-     *
-     * @return
-     */
-    @Override
-    public boolean hasNext() {
-        return array.length > index;
-    }
-
-    /**
-     * Method returns next index element
-     *
-     * @return
-     */
-    @Override
-    public E next() {
-        return array[index++];
-    }
-
-    /**
-     * Method turns index to 0
-     */
-    @Override
-    public void reset() {
-        index = 0;
-    }
 }
